@@ -1,0 +1,51 @@
+body{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 150px;
+    text-align: center;
+}
+
+.tooltip {
+    font-size: 12px;
+    color: black;
+    position: relative;
+}
+
+/*para hacer que aparezca el tooltip*/
+
+.tooltip:hover .tooltip-text{
+    display: inline-block;
+}
+
+/*modificar el comportamiento tooltip-text*/
+
+.tooltip-text{
+    text-align: center;
+    font-size: 12px;
+    background-color: black;
+    color:  rgb(229, 198, 236);
+    position: absolute;
+    z-index: 1;
+    line-height: 35px;
+    display: none;
+    left: 0;
+    right: 0;
+    top: -40px;
+    border-radius: 8px;
+    
+}
+
+/*selector after para el efecto despues de posar la flecha encima
+de la bandera donde debe aparecer el tooltip*/
+
+.tooltip-text::after{
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -7px;
+    left: 43px;
+    display: block;
+    
+}
